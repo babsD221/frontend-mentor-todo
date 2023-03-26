@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="day-mode">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="page-header">
+    <picture class="light-head-img">
+      <source media="(max-width:768px)" srcset="images/bg-mobile-light.jpg">
+      <img   src="./images/bg-desktop-light.jpg" alt="">
+    </picture>
+    <picture class="dark-head-img">
+      <source media="(max-width:768px)" srcset="images/bg-mobile-dark.jpg">
+      <img   src="./images/bg-desktop-dark.jpg" alt="">
+    </picture>
+  </div>
+
+  <div class="container">
+    <div class="title">
+      <h1>TODO</h1>
+      <div class="toggle-btn">
+        <img class="  toogle-btn-light" src="images/icon-moon.svg" alt="">
+        <img class=" toogle-btn-dark" src="images/icon-sun.svg" alt="">
+      </div>
+
+
+    </div>
+    <div class="add-task-input">
+      <div class="round"></div>
+      <input type="text" placeholder="Create a new todo...">
+    </div>
+    <div class="todos-container">
+      <div class="todos">
+
+      </div>
+      <div class="footer">
+        <p><span id="todos-number">0</span> items todo</p>
+        <div class="filter">
+          <div onclick="filter('all')" class="filter-buttons">All</div>
+          <div onclick="filter('active')" class="filter-buttons">Active</div>
+          <div onclick="filter('completed')" class="filter-buttons">Completed</div>
+
+        </div>
+        <div onclick="clearCompleted()" class="clear-completed">Clear Completed</div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="filter-container">
+    <div class="filter-mobile">
+      <div onclick="filter('all')" class="filter-buttons">All</div>
+      <div onclick="filter('active')" class="filter-buttons">Active</div>
+      <div onclick="filter('completed')" class="filter-buttons">Completed</div>
+  
+    </div>
+  </div>
+
+
+  <div class="bottom-message">Drag and drop to reorder list</div>
+
+  <script src="index.js" defer></script>
+</body>
+</html>
